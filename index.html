@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I'm Sorry, Chiiii</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #fffaf5;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 40px 20px;
+        }
+        h1, h2 {
+            color: #c62828;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        button {
+            background-color: #c62828;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #a02f2f;
+        }
+        .section {
+            display: none;
+        }
+        .visible {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hello Beautiful</h1>
+        
+        <!-- First section: Hello message -->
+        <div class="section visible" id="helloSection">
+            <p>Please don't ignore this and watch out...</p>
+            <button onclick="nextSection('helloSection', 'sorrySection')">Next</button>
+        </div>
+
+        <!-- Second section: Sorry Message -->
+        <div class="section" id="sorrySection">
+            <p>Hey Chiiii,</p>
+            <p>I know a website can't fix everything, but I made this to show how truly sorry I am. I disrespected someone very important to you, and I hurt you — the last thing I ever wanted to do. I sincerely grant apologies for that.</p>
+            <p>For the past *7 years*, I've loved you deeply, and I have always tried to accept and understand you in every way. There is nothing about you that I wouldn't accept, because I know the love and warmth you give. Everything we’ve been through has made me realize that our love is so much more than just a relationship — it's a bond, a partnership that I never want to lose. Even when things got tough, I was ready to do whatever it took to save our relationship, because I believe in us and in our future. I truly want to make it grow stronger, and continue till the very end. You are my everything, Chiiii, and I love you more than words can express.</p>
+            <button onclick="nextSection('sorrySection', 'allTheBestSection')">Next</button>
+            <button onclick="nextSection('sorrySection', 'helloSection')">Back</button>
+        </div>
+
+        <!-- Third section: All the Best Message -->
+        <div class="section" id="allTheBestSection">
+            <h2>All the Best!</h2>
+            <p>Chii, your exams are important — I know they’re not just about grades, but they represent your dreams, your goals, and your hard work. I have always admired your dedication to your studies, your passion for learning, and the effort you put in every day. Your exams are just one step toward the future you’re building, and I have complete faith that you will do well. I’m here to support you, every step of the way.</p>
+            <p>Remember, it’s okay to feel stressed, it’s okay to feel challenged, but never forget that *you’re never alone in this*. I’m always here to help, no matter what the situation is. Whether it’s studying together, offering a shoulder to lean on, or just being there when you need someone — I will never give up on you, because I love you and I’m invested in your happiness, your success, and your growth. </p>
+            <p>My love, I don’t give up easily on the person I love, and I believe in you. You’re stronger than any exam, any obstacle, and I know you’ll shine brighter than you ever thought possible. Just trust yourself, do your best, and remember that *I’ll always be your biggest supporter*. No matter the challenges, I am here for you, and I always will be. Go conquer those exams, and show the world how amazing you are.</p>
+            <button onclick="nextSection('allTheBestSection', 'sorrySection')">Back</button>
+        </div>
+    </div>
+
+    <script>
+        function nextSection(currentSectionId, nextSectionId) {
+            // Hide the current section
+            document.getElementById(currentSectionId).classList.remove('visible');
+            // Show the next section
+            document.getElementById(nextSectionId).classList.add('visible');
+        }
+    </script>
+</body>
+</html>
